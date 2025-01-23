@@ -57,18 +57,18 @@ provide(FieldContextKey, fieldContext)
 <template>
   <FieldArray v-slot="{ fields, remove, push }" as="section" :name="fieldName">
     <slot v-bind="props">
-      <Accordion type="multiple" class="tw-w-full" collapsible :disabled="disabled" as-child>
+      <Accordion type="multiple" class="w-full" collapsible :disabled="disabled" as-child>
         <FormItem>
-          <AccordionItem :value="fieldName" class="tw-border-none">
+          <AccordionItem :value="fieldName" class="border-none">
             <AccordionTrigger>
-              <AutoFormLabel class="tw-text-base" :required="required">
+              <AutoFormLabel class="text-base" :required="required">
                 {{ schema?.description || beautifyObjectName(fieldName) }}
               </AutoFormLabel>
             </AccordionTrigger>
 
             <AccordionContent>
               <template v-for="(field, index) of fields" :key="field.key">
-                <div class="tw-mb-4 tw-p-1">
+                <div class="mb-4 p-1">
                   <AutoFormField
                     :field-name="`${fieldName}[${index}]`"
                     :label="fieldName"
@@ -76,7 +76,7 @@ provide(FieldContextKey, fieldContext)
                     :config="config as ConfigItem"
                   />
 
-                  <div class="tw-!my-4 tw-flex tw-justify-end">
+                  <div class="!my-4 flex justify-end">
                     <Button
                       type="button"
                       size="icon"
@@ -93,10 +93,10 @@ provide(FieldContextKey, fieldContext)
               <Button
                 type="button"
                 variant="secondary"
-                class="tw-mt-4 tw-flex tw-items-center"
+                class="mt-4 flex items-center"
                 @click="push(null)"
               >
-                <PlusIcon class="tw-mr-2" :size="16" />
+                <PlusIcon class="mr-2" :size="16" />
                 Add
               </Button>
             </AccordionContent>

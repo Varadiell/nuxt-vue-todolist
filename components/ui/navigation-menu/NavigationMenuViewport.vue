@@ -19,12 +19,12 @@ const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>
-  <div class="tw-absolute tw-left-0 tw-top-full tw-flex tw-justify-center">
+  <div class="absolute left-0 top-full flex justify-center">
     <NavigationMenuViewport
       v-bind="forwardedProps"
       :class="
         cn(
-          'tw-origin-top-center tw-relative tw-mt-1.5 tw-h-[--radix-navigation-menu-viewport-height] tw-w-full tw-overflow-hidden tw-rounded-md tw-border tw-bg-popover tw-text-popover-foreground tw-shadow-lg data-[state=open]:tw-animate-in data-[state=closed]:tw-animate-out data-[state=closed]:tw-zoom-out-95 data-[state=open]:tw-zoom-in-90 md:tw-w-[--radix-navigation-menu-viewport-width]',
+          'origin-top-center relative mt-1.5 h-[--radix-navigation-menu-viewport-height] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[--radix-navigation-menu-viewport-width]',
           props.class,
         )
       "

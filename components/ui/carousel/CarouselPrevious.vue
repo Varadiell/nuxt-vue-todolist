@@ -14,18 +14,18 @@ const { orientation, canScrollPrev, scrollPrev } = useCarousel()
   <Button
     :disabled="!canScrollPrev"
     :class="cn(
-      'tw-touch-manipulation tw-absolute tw-h-8 tw-w-8 tw-rounded-full tw-p-0',
+      'touch-manipulation absolute h-8 w-8 rounded-full p-0',
       orientation === 'horizontal'
-        ? 'tw--left-12 tw-top-1/2 tw--translate-y-1/2'
-        : 'tw--top-12 tw-left-1/2 tw--translate-x-1/2 tw-rotate-90',
+        ? '-left-12 top-1/2 -translate-y-1/2'
+        : '-top-12 left-1/2 -translate-x-1/2 rotate-90',
       props.class,
     )"
     variant="outline"
     @click="scrollPrev"
   >
     <slot>
-      <ArrowLeft class="tw-h-4 tw-w-4 tw-text-current" />
-      <span class="tw-sr-only">Previous Slide</span>
+      <ArrowLeft class="h-4 w-4 text-current" />
+      <span class="sr-only">Previous Slide</span>
     </slot>
   </Button>
 </template>

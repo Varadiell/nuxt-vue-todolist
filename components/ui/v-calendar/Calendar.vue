@@ -77,25 +77,25 @@ const vCalendarSlots = computed(() => {
 </script>
 
 <template>
-  <div class="tw-relative">
-    <div v-if="$attrs.mode !== 'time'" class="tw-absolute tw-flex tw-justify-between tw-w-full tw-px-4 tw-top-3 tw-z-[1]">
+  <div class="relative">
+    <div v-if="$attrs.mode !== 'time'" class="absolute flex justify-between w-full px-4 top-3 z-[1]">
       <button
         :class="cn(
           buttonVariants({ variant: 'outline' }),
-          'tw-h-7 tw-w-7 tw-bg-transparent tw-p-0 tw-opacity-50 hover:tw-opacity-100',
+          'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
         )"
         @click="handleNav('prev')"
       >
-        <ChevronLeft class="tw-w-4 tw-h-4" />
+        <ChevronLeft class="w-4 h-4" />
       </button>
       <button
         :class="cn(
           buttonVariants({ variant: 'outline' }),
-          'tw-h-7 tw-w-7 tw-bg-transparent tw-p-0 tw-opacity-50 hover:tw-opacity-100',
+          'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
         )"
         @click="handleNav('next')"
       >
-        <ChevronRight class="tw-w-4 tw-h-4" />
+        <ChevronRight class="w-4 h-4" />
       </button>
     </div>
 
@@ -104,7 +104,7 @@ const vCalendarSlots = computed(() => {
       v-bind="$attrs"
       v-model="modelValue"
       :model-modifiers="modelModifiers"
-      class="tw-calendar"
+      class="calendar"
       trim-weeks
       :transition="'none'"
       :columns="columns"

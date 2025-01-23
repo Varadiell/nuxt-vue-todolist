@@ -9,7 +9,7 @@ const props = defineProps<{
 
 <template>
   <li
-    :class="cn('tw-inline-flex tw-items-center tw-gap-1.5', props.class)"
+    :class="cn('inline-flex items-center gap-1.5', props.class)"
   >
     <slot />
   </li>

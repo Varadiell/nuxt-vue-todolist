@@ -23,12 +23,12 @@ const forwardedProps = useForwardProps(delegatedProps)
   <ContextMenuSubTrigger
     v-bind="forwardedProps"
     :class="cn(
-      'tw-flex tw-cursor-default tw-select-none tw-items-center tw-rounded-sm tw-px-2 tw-py-1.5 tw-text-sm tw-outline-none focus:tw-bg-accent focus:tw-text-accent-foreground data-[state=open]:tw-bg-accent data-[state=open]:tw-text-accent-foreground',
-      inset && 'tw-pl-8',
+      'flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground',
+      inset && 'pl-8',
       props.class,
     )"
   >
     <slot />
-    <ChevronRight class="tw-ml-auto tw-h-4 tw-w-4" />
+    <ChevronRight class="ml-auto h-4 w-4" />
   </ContextMenuSubTrigger>
 </template>

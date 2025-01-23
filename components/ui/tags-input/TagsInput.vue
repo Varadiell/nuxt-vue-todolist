@@ -16,7 +16,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
-  <TagsInputRoot v-bind="forwarded" :class="cn('tw-flex tw-flex-wrap tw-gap-2 tw-items-center tw-rounded-md tw-border tw-border-input tw-bg-background tw-px-3 tw-py-2 tw-text-sm', props.class)">
+  <TagsInputRoot v-bind="forwarded" :class="cn('flex flex-wrap gap-2 items-center rounded-md border border-input bg-background px-3 py-2 text-sm', props.class)">
     <slot />
   </TagsInputRoot>
 </template>

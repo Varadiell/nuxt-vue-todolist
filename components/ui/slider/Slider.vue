@@ -19,18 +19,18 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <SliderRoot
     :class="cn(
-      'tw-relative tw-flex tw-w-full tw-touch-none tw-select-none tw-items-center data-[orientation=vertical]:tw-flex-col data-[orientation=vertical]:tw-w-2 data-[orientation=vertical]:tw-h-full',
+      'relative flex w-full touch-none select-none items-center data-[orientation=vertical]:flex-col data-[orientation=vertical]:w-2 data-[orientation=vertical]:h-full',
       props.class,
     )"
     v-bind="forwarded"
   >
-    <SliderTrack class="tw-relative tw-h-2 tw-w-full data-[orientation=vertical]:tw-w-2 tw-grow tw-overflow-hidden tw-rounded-full tw-bg-secondary">
-      <SliderRange class="tw-absolute tw-h-full data-[orientation=vertical]:tw-w-full tw-bg-primary" />
+    <SliderTrack class="relative h-2 w-full data-[orientation=vertical]:w-2 grow overflow-hidden rounded-full bg-secondary">
+      <SliderRange class="absolute h-full data-[orientation=vertical]:w-full bg-primary" />
     </SliderTrack>
     <SliderThumb
       v-for="(_, key) in modelValue"
       :key="key"
-      class="tw-block tw-h-5 tw-w-5 tw-rounded-full tw-border-2 tw-border-primary tw-bg-background tw-ring-offset-background tw-transition-colors focus-visible:tw-outline-none focus-visible:tw-ring-2 focus-visible:tw-ring-ring focus-visible:tw-ring-offset-2 disabled:tw-pointer-events-none disabled:tw-opacity-50"
+      class="block h-5 w-5 rounded-full border-2 border-primary bg-background ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
     />
   </SliderRoot>
 </template>

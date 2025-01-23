@@ -12,7 +12,7 @@ const props = defineProps<{
   <Input
     data-sidebar="input"
     :class="cn(
-      'tw-h-8 tw-w-full tw-bg-background tw-shadow-none focus-visible:tw-ring-2 focus-visible:tw-ring-sidebar-ring',
+      'h-8 w-full bg-background shadow-none focus-visible:ring-2 focus-visible:ring-sidebar-ring',
       props.class,
     )"
   >

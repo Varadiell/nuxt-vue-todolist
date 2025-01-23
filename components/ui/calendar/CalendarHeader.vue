@@ -15,7 +15,7 @@ const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>
-  <CalendarHeader :class="cn('tw-relative tw-flex tw-w-full tw-items-center tw-justify-between tw-pt-1', props.class)" v-bind="forwardedProps">
+  <CalendarHeader :class="cn('relative flex w-full items-center justify-between pt-1', props.class)" v-bind="forwardedProps">
     <slot />
   </CalendarHeader>
 </template>

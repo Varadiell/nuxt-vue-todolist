@@ -15,15 +15,15 @@ const props = withDefaults(defineProps<PrimitiveProps & {
   <Primitive
     data-sidebar="menu-action"
     :class="cn(
-      'tw-absolute tw-right-1 tw-top-1.5 tw-flex tw-aspect-square tw-w-5 tw-items-center tw-justify-center tw-rounded-md tw-p-0 tw-text-sidebar-foreground tw-outline-none tw-ring-sidebar-ring tw-transition-transform hover:tw-bg-sidebar-accent hover:tw-text-sidebar-accent-foreground focus-visible:tw-ring-2 tw-peer-hover/menu-button:text-sidebar-accent-foreground [&>svg]:tw-size-4 [&>svg]:tw-shrink-0',
+      'absolute right-1 top-1.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-sidebar-foreground outline-none ring-sidebar-ring transition-transform hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 peer-hover/menu-button:text-sidebar-accent-foreground [&>svg]:size-4 [&>svg]:shrink-0',
       // Increases the hit area of the button on mobile.
-      'after:tw-absolute after:tw--inset-2 after:md:tw-hidden',
-      'tw-peer-data-[size=sm]/menu-button:top-1',
-      'tw-peer-data-[size=default]/menu-button:top-1.5',
-      'tw-peer-data-[size=lg]/menu-button:top-2.5',
-      'group-data-[collapsible=icon]:tw-hidden',
+      'after:absolute after:-inset-2 after:md:hidden',
+      'peer-data-[size=sm]/menu-button:top-1',
+      'peer-data-[size=default]/menu-button:top-1.5',
+      'peer-data-[size=lg]/menu-button:top-2.5',
+      'group-data-[collapsible=icon]:hidden',
       showOnHover
-        && 'tw-group-focus-within/menu-item:opacity-100 tw-group-hover/menu-item:opacity-100 data-[state=open]:tw-opacity-100 tw-peer-data-[active=true]/menu-button:text-sidebar-accent-foreground md:tw-opacity-0',
+        && 'group-focus-within/menu-item:opacity-100 group-hover/menu-item:opacity-100 data-[state=open]:opacity-100 peer-data-[active=true]/menu-button:text-sidebar-accent-foreground md:opacity-0',
       props.class,
     )"
     :as="as"

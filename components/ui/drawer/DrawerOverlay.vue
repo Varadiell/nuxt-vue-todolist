@@ -14,5 +14,5 @@ const delegatedProps = computed(() => {
 </script>
 
 <template>
-  <DrawerOverlay v-bind="delegatedProps" :class="cn('tw-fixed tw-inset-0 tw-z-50 tw-bg-black/80', props.class)" />
+  <DrawerOverlay v-bind="delegatedProps" :class="cn('fixed inset-0 z-50 bg-black/80', props.class)" />
 </template>

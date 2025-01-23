@@ -32,15 +32,15 @@ const df = new DateFormatter('en-US', {
                 <Button
                   variant="outline"
                   :class="cn(
-                    'tw-w-full tw-justify-start tw-text-left tw-font-normal',
-                    !slotProps.componentField.modelValue && 'tw-text-muted-foreground',
+                    'w-full justify-start text-left font-normal',
+                    !slotProps.componentField.modelValue && 'text-muted-foreground',
                   )"
                 >
-                  <CalendarIcon class="tw-mr-2 tw-h-4 tw-w-4" :size="16" />
+                  <CalendarIcon class="mr-2 h-4 w-4" :size="16" />
                   {{ slotProps.componentField.modelValue ? df.format(slotProps.componentField.modelValue.toDate(getLocalTimeZone())) : "Pick a date" }}
                 </Button>
               </PopoverTrigger>
-              <PopoverContent class="tw-w-auto tw-p-0">
+              <PopoverContent class="w-auto p-0">
                 <Calendar initial-focus v-bind="slotProps.componentField" />
               </PopoverContent>
             </Popover>

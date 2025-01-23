@@ -14,5 +14,5 @@ const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>
-  <PinInputInput v-bind="forwardedProps" :class="cn('tw-relative tw-text-center focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-ring focus:tw-relative focus:tw-z-10 tw-flex tw-h-10 tw-w-10 tw-items-center tw-justify-center tw-border-y tw-border-r tw-border-input tw-text-sm tw-transition-all first:tw-rounded-l-md first:tw-border-l last:tw-rounded-r-md', props.class)" />
+  <PinInputInput v-bind="forwardedProps" :class="cn('relative text-center focus:outline-none focus:ring-2 focus:ring-ring focus:relative focus:z-10 flex h-10 w-10 items-center justify-center border-y border-r border-input text-sm transition-all first:rounded-l-md first:border-l last:rounded-r-md', props.class)" />
 </template>

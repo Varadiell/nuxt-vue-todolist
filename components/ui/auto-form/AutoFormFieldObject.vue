@@ -52,15 +52,15 @@ provide(FieldContextKey, fieldContext)
 <template>
   <section>
     <slot v-bind="props">
-      <Accordion type="single" as-child class="tw-w-full" collapsible :disabled="disabled">
+      <Accordion type="single" as-child class="w-full" collapsible :disabled="disabled">
         <FormItem>
-          <AccordionItem :value="fieldName" class="tw-border-none">
+          <AccordionItem :value="fieldName" class="border-none">
             <AccordionTrigger>
-              <AutoFormLabel class="tw-text-base" :required="required">
+              <AutoFormLabel class="text-base" :required="required">
                 {{ schema?.description || beautifyObjectName(fieldName) }}
               </AutoFormLabel>
             </AccordionTrigger>
-            <AccordionContent class="tw-p-1 tw-space-y-5">
+            <AccordionContent class="p-1 space-y-5">
               <template v-for="(shape, key) in shapes" :key="key">
                 <AutoFormField
                   :config="config?.[key as keyof typeof config] as ConfigItem"

@@ -60,7 +60,7 @@ const selectorsBar = computed(() => props.type === 'grouped' ? GroupedBar.select
 </script>
 
 <template>
-  <div :class="cn('tw-w-full tw-h-[400px] tw-flex tw-flex-col tw-items-end', $attrs.class ?? 'tw-')">
+  <div :class="cn('w-full h-[400px] flex flex-col items-end', $attrs.class ?? '')">
     <ChartLegend v-if="showLegend" v-model:items="legendItems" @legend-item-click="handleLegendItemClick" />
 
     <VisXYContainer

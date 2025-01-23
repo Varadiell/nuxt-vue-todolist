@@ -16,16 +16,16 @@ const width = computed(() => {
 <template>
   <div
     data-sidebar="menu-skeleton"
-    :class="cn('tw-rounded-md tw-h-8 tw-flex tw-gap-2 tw-px-2 tw-items-center', props.class)"
+    :class="cn('rounded-md h-8 flex gap-2 px-2 items-center', props.class)"
   >
     <Skeleton
       v-if="showIcon"
-      class="tw-size-4 tw-rounded-md"
+      class="size-4 rounded-md"
       data-sidebar="menu-skeleton-icon"
     />
 
     <Skeleton
-      class="tw-h-4 tw-flex-1 tw-max-w-[--skeleton-width]"
+      class="h-4 flex-1 max-w-[--skeleton-width]"
       data-sidebar="menu-skeleton-text"
       :style="{ '--skeleton-width': width }"
     />
