@@ -1,6 +1,5 @@
 <template>
   <div>
-    Layout
     <AppHeader />
     <slot />
     <AppFooter />
