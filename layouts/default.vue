@@ -1,5 +1,9 @@
 <script setup lang="ts">
   import { List } from 'lucide-vue-next'
+  const route = useRoute()
+  const notActive = (routeName: string) => {
+    return route.name !== routeName
+  }
 </script>
 
 <template>
@@ -9,10 +13,10 @@
         <a href="/" class="flex items-center gap-2 text-lg font-semibold md:text-base">
           <List class="h-6 w-6" />
         </a>
-        <a href="/" class="text-muted-foreground transition-colors hover:text-foreground">
+        <a href="/" class="transition-colors hover:text-foreground" :class="{ 'text-muted-foreground': notActive('index') }">
           Home
         </a>
-        <a href="/todolist" class="text-foreground transition-colors hover:text-foreground">
+        <a href="/todolist" class="transition-colors hover:text-foreground" :class="{ 'text-muted-foreground': notActive('todolist') }">
           TodoList
         </a>
       </nav>
