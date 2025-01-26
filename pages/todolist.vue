@@ -14,6 +14,9 @@
     })
     todo.value = ''
   }
+  const removeTodo = (index: number) => {
+    todoList.value.splice(index, 1)
+  }
 </script>
 
 <template>
@@ -65,10 +68,11 @@
               <TableCell>
                 {{todoItem.description}}
               </TableCell>
-              <TableCell class="text-right">
+              <TableCell class="flex gap-1 justify-end">
                 <NuxtLink :to="`/item/${index}`">
                   <Button>See item</Button>
                 </NuxtLink>
+                <Button variant="destructive" @click="removeTodo(index)">Delete</Button>
               </TableCell>
             </TableRow>
           </TableBody>
