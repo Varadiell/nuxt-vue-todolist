@@ -7,7 +7,9 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: 'A Nuxt Vue TodoList demo' },
       ]
-    }
+    },
+    layoutTransition: { name: 'layout', mode: 'out-in' },
+    pageTransition: { name: 'page', mode: 'out-in' }
   },
   colorMode: {
     classSuffix: '',
