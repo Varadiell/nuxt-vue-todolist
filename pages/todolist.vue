@@ -58,17 +58,19 @@
             </TableRow>
           </TableHeader>
           <TableBody>
-            <TableRow v-for="todoItem in todoList">
+            <TableRow v-for="(todoItem, index) in todoList">
               <TableCell>
                 <div class="font-medium">
-                  {{todoList.indexOf(todoItem) + 1}}
+                  {{index}}
                 </div>
               </TableCell>
               <TableCell>
                 {{todoItem.description}}
               </TableCell>
               <TableCell class="text-right">
-                <Button size="sm">Done</Button>
+                <NuxtLink :to="`/item/${index}`">
+                  <Button>See item</Button>
+                </NuxtLink>
               </TableCell>
             </TableRow>
           </TableBody>

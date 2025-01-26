@@ -2,18 +2,16 @@
   definePageMeta({
     middleware: 'route'
   })
-  const route = useRoute()
-  const todoList = useTodoList()
-  const itemIndex = Number(route.params.id) || 0;
+  const { data } = await useFetch('/api/helloworld')
 </script>
 
 <template>
   <div>
     <Card>
       <CardHeader>
-        <CardTitle>Item #{{ itemIndex }}</CardTitle>
+        <CardTitle>Fetch</CardTitle>
         <CardDescription>
-          {{ todoList[itemIndex]?.description }}
+          {{ data }}
         </CardDescription>
       </CardHeader>
     </Card>
