@@ -4,6 +4,10 @@
   import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
   import { Input } from '@/components/ui/input'
 
+  definePageMeta({
+    middleware: 'route'
+  })
+
   const todoList = ref<Array<{ description: string, completed: boolean }>>([])
   const todo = ref('')
   const addTodo = () => {
