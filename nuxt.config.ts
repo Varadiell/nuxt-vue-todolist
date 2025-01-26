@@ -1,5 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: 'Nuxt Vue TodoList',
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'description', content: 'A Nuxt Vue TodoList demo' },
+      ]
+    }
+  },
   colorMode: {
     classSuffix: '',
     preference: 'system',
