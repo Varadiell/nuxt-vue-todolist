@@ -15,8 +15,13 @@
           Welcome!
         </CardDescription>
       </CardHeader>
-      <CardFooter class="border-t px-6 py-4">
-        <NuxtLink to="/todolist">Go to TodoList</NuxtLink>
+      <CardFooter class="border-t px-6 py-4 flex-col gap-1 items-start">
+        <NuxtLink to="/todolist">
+          <Button>Go to TodoList</Button>
+        </NuxtLink>
+        <NuxtLink to="/kamoulox">
+          <Button>Go to Error</Button>
+        </NuxtLink>
       </CardFooter>
     </Card>
   </div>
