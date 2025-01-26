@@ -1,6 +1,5 @@
 <script setup lang="ts">
   import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-
   definePageMeta({
     middleware: 'route'
   })
@@ -16,9 +15,6 @@
         </CardDescription>
       </CardHeader>
       <CardFooter class="border-t px-6 py-4 flex-col gap-1 items-start">
-        <NuxtLink to="/todolist">
-          <Button>Go to TodoList</Button>
-        </NuxtLink>
         <NuxtLink to="/kamoulox">
           <Button>Go to Error</Button>
         </NuxtLink>
